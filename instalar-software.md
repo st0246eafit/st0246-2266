@@ -40,6 +40,5 @@ hay 2 versiones: 16.16.0 LTS y 18.7.0 Actual (esta será la de trabajo de este d
 ### probar versiones:
 
     node -v
-(18.7.0)
+    
     npm -v
-(8.15.0)
