@@ -6,7 +6,11 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/tienda");
+//const mongoatlas = "mongodb+srv://root:******@cluster0.jd1xd.mongodb.net/tienda?retryWrites=true&w=majority";
+
+const mongolocal = "mongodb://localhost/tienda";
+
+mongoose.connect(mongolocal);
 
 app.use('/productos', productoRouter);
 
