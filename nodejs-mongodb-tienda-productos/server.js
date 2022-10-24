@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-//const mongoatlas = "mongodb+srv://root:******@cluster0.jd1xd.mongodb.net/tienda?retryWrites=true&w=majority";
+const mongoatlas = "mongodb+srv://root:*******@cluster0.jd1xd.mongodb.net/?retryWrites=true&w=majority";
 
 const mongolocal = "mongodb://localhost/tienda";
 
