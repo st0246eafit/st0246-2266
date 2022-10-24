@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const productosModel = require("../models/productos");
+const productoModel = require("../models/producto");
 
 router.get('/', function (req, res, next) {
-    productosModel
+    productoModel
         .obtener()
         .then(productos => {
             res.render("productos/ver", {
@@ -28,7 +28,7 @@ router.post('/insertar', function (req, res, next) {
         return res.status(500).send("No hay nombre o precio");
     }
     // Si todo va bien, seguimos
-    productosModel
+    productoModel
         .insertar(nombre, precio)
         .then(idProductoInsertado => {
             res.redirect("/productos");
@@ -38,7 +38,7 @@ router.post('/insertar', function (req, res, next) {
         });
 });
 router.get('/eliminar/:id', function (req, res, next) {
-    productosModel
+    productoModel
         .eliminar(req.params.id)
         .then(() => {
             res.redirect("/productos");
@@ -48,7 +48,7 @@ router.get('/eliminar/:id', function (req, res, next) {
         });
 });
 router.get('/editar/:id', function (req, res, next) {
-    productosModel
+    productoModel
         .obtenerPorId(req.params.id)
         .then(producto => {
             if (producto) {
@@ -72,7 +72,7 @@ router.post('/actualizar/', function (req, res, next) {
         return res.status(500).send("No hay suficientes datos");
     }
     // Si todo va bien, seguimos
-    productosModel
+    productoModel
         .actualizar(id, nombre, precio)
         .then(() => {
             res.redirect("/productos");
