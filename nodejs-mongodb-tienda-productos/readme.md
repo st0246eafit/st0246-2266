@@ -23,26 +23,26 @@ Después, visita:
 
 utilice un cliente postman en web o instalado en tu máquina para probar todos los API REST (CRUD):
 
-// consultar todos los productos
-// URI: /productos
-// Método: GET
+    consultar todos los productos
+    URI: /productos
+    Método: GET
 
-ej: http://localhost:3000/productos
+        ej: http://localhost:3000/productos
 
-// insert 
-// URI: /productos/insertar
-// Método: POST
+    insert 
+    URI: /productos/insertar
+    Método: POST
 
-ej: http://localhost:3000/productos/insertar
+        ej: http://localhost:3000/productos/insertar
 
-// update
-// URI: /productos/actualizar/{id}
-// Método: PATCH
+    update
+    URI: /productos/actualizar/{id}
+    Método: PATCH
 
-ej: http://localhost:3000/productos/actualizar/6355d57191f8c218e41ba380
+        ej: http://localhost:3000/productos/actualizar/6355d57191f8c218e41ba380
 
-// delete
-// URI: /productos/eliminar/{id}
-// Método: DELETE
+    delete
+    URI: /productos/eliminar/{id}
+    Método: DELETE
 
-ej: http://localhost:3000/productos/eliminar/6355d57191f8c218e41ba380
+        ej: http://localhost:3000/productos/eliminar/6355d57191f8c218e41ba380
